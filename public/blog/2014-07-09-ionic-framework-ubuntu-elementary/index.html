@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.blue_grey-pink.min.css" />
+	 <link rel="stylesheet" href="/css/styles.css">
+	 <title>Ionic Framework quick setup (Ubuntu 12.04, Elementary Luna)</title>
+	 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Max Malm">
+</head>
+<body>
+
+   <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
+
+			<div class="demo-back">
+	          <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" href="/" title="go back" role="button">
+	            <i class="material-icons" role="presentation">arrow_back</i>
+	          </a>
+	        </div>
+          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50"
+              >
+              <h3>Ionic Framework quick setup (Ubuntu 12.04, Elementary Luna)</h3>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+              <div class="section-spacer"></div>
+              <div class="meta__favorites">
+                425 <i class="material-icons" role="presentation">favorite</i>
+                <span class="visuallyhidden">favorites</span>
+              </div>
+              <div>
+                <i class="material-icons" role="presentation">bookmark</i>
+                <span class="visuallyhidden">bookmark</span>
+              </div>
+              <div>
+                <i class="material-icons" role="presentation">share</i>
+                <span class="visuallyhidden">share</span>
+              </div>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+              <p>The &ldquo;Getting Started&rdquo; page for Ionic looks like it&rsquo;s really simple! But it&rsquo;s not really and I&rsquo;ve struggled with this for the whole day, but I finally got it to work. I hope someone finds this useful.</p>
+
+<p>This is for Android development, I don&rsquo;t have a Mac so I can&rsquo;t test this for iOS</p>
+
+<p>Download Android SDK<br />
+<a href="https://developer.android.com/sdk/index.html#download">https://developer.android.com/sdk/index.html#download</a></p>
+
+<p>Add Android SDK to path (adjust this to your actual paths)<br />
+<code>export PATH=$PATH:/home/max/development/adt-bundle/sdk/platform-tools:/home/max/development/adt-bundle/sdk/tools</code></p>
+
+<p>Install JDK<br />
+<code>sudo apt-get install openjdk-7-jdk</code></p>
+
+<p>MORE PATHS (JDK)<br />
+<code>export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64</code></p>
+
+<p>Install node.js<br />
+<code>sudo apt-get install python-software-properties</code><br />
+<code>sudo add-apt-repository ppa:chris-lea/node.js</code><br />
+<code>sudo apt-get update</code><br />
+<code>sudo apt-get install nodejs</code></p>
+
+<p>Install ant and git<br />
+<code>sudo apt-get install ant ant-contrib ant-optional ant-gcj git</code></p>
+
+<p>Run <code>android</code> and install Android 19</p>
+
+<p>Run <code>android avd</code> to create an Android emulator</p>
+
+<p>Create a project<br />
+<code>ionic start myapp tabs</code><br />
+<code>cd myapp</code><br />
+<code>ionic platform add android</code><br />
+<code>ionic emulate android</code></p>
+
+            </div>
+          </div>
+         </div>
+
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            
+              <a href="https://github.com/benjick" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__github">
+                <span class="visuallyhidden">Github</span>
+              </a>
+            
+            
+            
+              <a href="https://facebook.com/maxmalm" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__facebook">
+                <span class="visuallyhidden">Facebook</span>
+              </a>
+            
+
+            
+              <a href="https://twitter.com/benjick" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                <span class="visuallyhidden">Twitter</span>
+              </a>
+            
+            
+
+            
+              <a href="https://plus.google.com/u/1/+MaxMalm" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                <span class="visuallyhidden">Google plus</span>
+              </a>
+            
+          </div>
+          
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

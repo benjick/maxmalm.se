@@ -1,0 +1,42 @@
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            {{with .Site.Params.Github}}
+              <a href="https://github.com/{{ . }}" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__github">
+                <span class="visuallyhidden">Github</span>
+              </a>
+            {{ end }}
+            
+            {{with .Site.Params.Facebook}}
+              <a href="https://facebook.com/{{ . }}" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__facebook">
+                <span class="visuallyhidden">Facebook</span>
+              </a>
+            {{ end }}
+
+            {{with .Site.Params.Twitter}}
+              <a href="https://twitter.com/{{ . }}" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                <span class="visuallyhidden">Twitter</span>
+              </a>
+            {{ end }}
+            
+
+            {{with .Site.Params.GPlus}}
+              <a href="https://plus.google.com/u/1/+{{ . }}" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                <span class="visuallyhidden">Google plus</span>
+              </a>
+            {{ end }}
+          </div>
+          <!--
+          <div class="mdl-mini-footer--right-section">
+            <button class="mdl-mini-footer--social-btn social-btn__share">
+              <i class="material-icons" role="presentation">share</i>
+              <span class="visuallyhidden">share</span>
+            </button>
+          </div>
+          -->
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+</body>
+</html>

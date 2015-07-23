@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+        <div class="demo-blog__posts mdl-grid">
+
+			<div class="demo-back">
+	          <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" href="/" title="go back" role="button">
+	            <i class="material-icons" role="presentation">arrow_back</i>
+	          </a>
+	        </div>
+          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50"
+              {{ with .Params.featured_image }} 
+                style="background-image: url('{{ . }}')" 
+              {{ end }}>
+              <h3>{{ .Title }}</h3>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+              <div class="section-spacer"></div>
+              <div class="meta__favorites">
+                425 <i class="material-icons" role="presentation">favorite</i>
+                <span class="visuallyhidden">favorites</span>
+              </div>
+              <div>
+                <i class="material-icons" role="presentation">bookmark</i>
+                <span class="visuallyhidden">bookmark</span>
+              </div>
+              <div>
+                <i class="material-icons" role="presentation">share</i>
+                <span class="visuallyhidden">share</span>
+              </div>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+              {{ .Content }}
+            </div>
+          </div>
+         </div>
+
+{{ partial "footer.html" . }}

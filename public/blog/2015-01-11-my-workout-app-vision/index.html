@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.blue_grey-pink.min.css" />
+	 <link rel="stylesheet" href="/css/styles.css">
+	 <title>My workout app vision</title>
+	 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Max Malm">
+</head>
+<body>
+
+   <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
+
+			<div class="demo-back">
+	          <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" href="/" title="go back" role="button">
+	            <i class="material-icons" role="presentation">arrow_back</i>
+	          </a>
+	        </div>
+          <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50"
+               
+                style="background-image: url('/assets/workout.jpg')" 
+              >
+              <h3>My workout app vision</h3>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+              <div class="section-spacer"></div>
+              <div class="meta__favorites">
+                425 <i class="material-icons" role="presentation">favorite</i>
+                <span class="visuallyhidden">favorites</span>
+              </div>
+              <div>
+                <i class="material-icons" role="presentation">bookmark</i>
+                <span class="visuallyhidden">bookmark</span>
+              </div>
+              <div>
+                <i class="material-icons" role="presentation">share</i>
+                <span class="visuallyhidden">share</span>
+              </div>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+              
+
+<p>Since I&rsquo;ve started trying out Meteor for development I&rsquo;ve been thinking a lot of what kind of application I want to make.
+Maybe Meteor isn&rsquo;t the right platform to use for this project at all, but I want to try it out to really dive into the language.</p>
+
+<p>The idea came from me using Stronglifts 5x5 app. It&rsquo;s very limiting until recently and the free version only let&rsquo;s you do the absolute program they&rsquo;ve decided. Fair enough, they can set boundaries within their own apps as they like. The thing that go me mad is that I bought the &ldquo;power up&rdquo;-package which included &ldquo;everything&rdquo;. They later on added another category of addons which&hellip; yes, wasn&rsquo;t unlocked bu the package I bought.</p>
+
+<p>Anyways, what I want to make is an open repository for workout, or just for yourself.</p>
+
+<h2 id="scenario-1:c9ca8a9aa57df8851c9cde54d04f8a19">Scenario 1</h2>
+
+<p>Start the app, add days (A, B, C), add workouts to days, set weight gain and how many sets (for example, 5x5, 3x12 etc) per routine. First time you go to the gym it serves you day A and you check off the lifts as your workout progresses, next day B etc, the starts over at A when it&rsquo;s done. That&rsquo;s it, you don&rsquo;t have to use any other feature and it&rsquo;s kinda like any workout app there.</p>
+
+<h2 id="scenario-2:c9ca8a9aa57df8851c9cde54d04f8a19">Scenario 2</h2>
+
+<p>You hear about this <strong>Sailor Lifting Routine</strong> and you want to try it for a couple of weeks. You start the app and search for <em>sailor</em>. Here you can find routines published by other (registered) users, you can browse them, see revisions (version 1, 2, 3), author comments (on rest day do some light power walking).</p>
+
+<p>You find the one you like and you choose to use it. Just like that you have a routine in your app ready to go.</p>
+
+<p>You could also search for routines that includes various workouts you want to miss, say you want squats and deaflift; you choose these and get search results which includes these workouts.</p>
+
+<h2 id="scenario-3:c9ca8a9aa57df8851c9cde54d04f8a19">Scenario 3</h2>
+
+<p>You want to share your knowledge about training with other users and you are the Sailor we talked about in the last scenario. You want people to use your workout because you believe in it. So you make the routine and you publish it to the open repository under your username and a nifty title (thesailor:workout). People can now give you feedback, ask questions and discuss your workout inside the app or from the web. Others can even use it outside this application in other applications from the open API.</p>
+
+<p>If you&rsquo;re not happy with your routine or want to change something you can always publish a new version of it. You will be able to find the old revisions but the latest one will be the default one. Users using your routine will get a notification that&rsquo;s it&rsquo;s been updated but can choose not to change it.</p>
+
+<hr />
+
+<p>The reason I want to build this in Meteor is because I can use the same codebase in the mobile app, the webapp, and the server side. It&rsquo;s also real time which means when you check off a lift it&rsquo;s already synced in the database, no need to schedule syncs and backups from the client. Of course something to sync later would have to be implemented to allow the user to use the app without internet.</p>
+
+            </div>
+          </div>
+         </div>
+
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            
+              <a href="https://github.com/benjick" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__github">
+                <span class="visuallyhidden">Github</span>
+              </a>
+            
+            
+            
+              <a href="https://facebook.com/maxmalm" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__facebook">
+                <span class="visuallyhidden">Facebook</span>
+              </a>
+            
+
+            
+              <a href="https://twitter.com/benjick" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__twitter">
+                <span class="visuallyhidden">Twitter</span>
+              </a>
+            
+            
+
+            
+              <a href="https://plus.google.com/u/1/+MaxMalm" class="mdl-button mdl-js-button mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                <span class="visuallyhidden">Google plus</span>
+              </a>
+            
+          </div>
+          
+        </footer>
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
+
+  <div class="demo-blog__posts mdl-grid">
+    {{ range $paginator.Pages }}
+      {{ if eq .Type "blog"}}
+
+        <div class="mdl-card mdl-cell mdl-cell--12-col">
+          <div class="
+            {{ if .Params.featured_image }} 
+            mdl-card__media
+            {{else}}
+            mdl-card__title
+            {{ end }}
+            mdl-color-text--grey-50" 
+            {{ with .Params.featured_image }} 
+              style="background-image: url('{{ . }}')" 
+            {{ end }}>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          </div>
+          <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+            {{ .Summary }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+
+    {{ partial "paginator.html" . }}
+  </div>
+
+{{ partial "footer.html" . }}

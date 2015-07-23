@@ -1,0 +1,12 @@
+baseurl = "http://maxmalm.se/"
+languageCode = "en-us"
+title = "Max Malm"
+theme = "benke"
+MetaDataFormat = "toml"
+Paginate = 10
+
+[params]
+  Github = "benjick"
+  Facebook = "maxmalm"
+  Twitter = "benjick"
+  GPlus = "MaxMalm"
