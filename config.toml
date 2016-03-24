@@ -1,7 +1,7 @@
-baseurl = "http://maxmalm.se/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Max Malm"
-theme = "benke"
+theme = "benclean"
 MetaDataFormat = "toml"
 Paginate = 10
 
@@ -10,3 +10,6 @@ Paginate = 10
   Facebook = "maxmalm"
   Twitter = "benjick"
   GPlus = "MaxMalm"
+
+[permalinks]
+  blog = "/:year/:month/:slug/"

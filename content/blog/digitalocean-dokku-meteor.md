@@ -1,5 +1,6 @@
 +++
 title = "DigitalOcean + Dokku + Meteor"
+slug = "digitalocean-dokku-meteor"
 date = "2015-06-12"
 featured_image = "/assets/ddm_splash.jpg"
 +++
@@ -70,7 +71,7 @@ Create a new file called `.env` in your root directory with the contents `export
 
 ### Deploying
 
-Now we just need to initialize a repository and push it to Dokku. 
+Now we just need to initialize a repository and push it to Dokku.
 
     git init
     git add .
@@ -78,7 +79,7 @@ Now we just need to initialize a repository and push it to Dokku.
     git remote add dokku dokku@apps.example.com:test
     git push dokku master
 
-Let's break it down. `git init` creates a local git repository. `git add .` stages all files in our directory and `git commit -m "intial commit"` creates a commit with the message *initial commit*. `git add` and `git commit` is probably the commands I use most when working with git. 
+Let's break it down. `git init` creates a local git repository. `git add .` stages all files in our directory and `git commit -m "intial commit"` creates a commit with the message *initial commit*. `git add` and `git commit` is probably the commands I use most when working with git.
 
 `git remote add dokku dokku@apps.example.com:test` tells us we have a remote destination called dokku and `dokku@apps.example.com:test` is the destination. `test` is what your app will be called later, in this case `test.apps.example.com`. `git push dokku master` pushes our HEAD to the remote location.
 
@@ -98,7 +99,7 @@ This will check our website root for the text *Todos - All your todos synced whe
 
 Now, add the file to git with `git add CHECKS` and commit it with `git commit -m "added CHECKS file"`. Now you can push it to Dokku again with `git push dokku master`. Now you've also learned how to update your application!
 
-Let's hook up our main domain, `test.com`. Point it to the same IP address as before. 
+Let's hook up our main domain, `test.com`. Point it to the same IP address as before.
 
 Now in your SSH session type `dokku domains:add test test.com` where the first *test* is the name of our application. *www.test.com* will be added as well. Finally, change your `ROOT\_URL` to our new domain with `dokku config:set test ROOT_URL=http://test.com`. As you can see Dokku runs our CHECKS file here as well. Visit [http://test.com](http://test.com) and enjoy the fruits of your hard work.
 

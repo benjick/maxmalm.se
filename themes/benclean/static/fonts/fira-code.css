@@ -1,0 +1,10 @@
+@font-face {
+  font-family: FiraCode;
+  src: url("FiraCode-Regular.otf") format("opentype");
+}
+
+pre, code {
+  font-feature-settings: "calt" 1;
+  font-variant-ligatures: contextual;
+  font-family: FiraCode, monospace;
+}

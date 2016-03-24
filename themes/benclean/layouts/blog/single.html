@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+{{ $title := .Title }}
+<div class="single">
+  {{ with .Params.featured_image }}
+    <div class="single__header" style="background-image: url('{{ . }}')">
+      <div class="single__title"><h1>{{ $title }}</h1></div>
+    </div>
+  {{ else }}
+    <div class="single__title"><h1>{{ $title }}</h1></div>
+  {{ end }}
+  <div class="single__content">
+    <div class="single__intro">A {{ .ReadingTime }} minute read from {{ .Date.Format "2 January 2006" }}</div>
+    {{ .Content }}
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

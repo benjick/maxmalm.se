@@ -1,0 +1,24 @@
+<nav class="demo-nav mdl-cell mdl-cell--12-col">
+
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
+  {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
+    {{ if $paginator.HasPrev }}
+      <div class="section-spacer"></div>
+      <a href="{{$paginator.Prev.URL}}" class="demo-nav__button" title="show more">
+        Back
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+          <i class="material-icons" role="presentation">arrow_back</i>
+        </button>
+      </a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+      <div class="section-spacer"></div>
+      <a href="{{$paginator.Next.URL}}" class="demo-nav__button" title="show more">
+        More
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+          <i class="material-icons" role="presentation">arrow_forward</i>
+        </button>
+      </a>
+    {{ end }}
+  {{ end }}
+</nav>

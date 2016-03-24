@@ -1,8 +1,8 @@
----
-title: "Have you met Flynn?"
-date:   2015-05-08
-featured_image: /assets/flynn_bg.jpg
----
++++
+title = "Have you met Flynn?"
+date = "2015-05-08"
+featured_image = "/assets/flynn_bg.jpg"
++++
 
 Yesterday Heroku announced the good bye to free tier as we know it. The short story is, free tier was abused by people pinging their dynos to stay alive 24/7 (they went to sleep after an hour of inactivity before), and now they introduced a hobby tier which is basically the same as the old free tier (without the sleep) for $7 a month. Pretty good deal, but I already have so much server power on premise that I feel I can't justify paying another provider to host my stuff.
 
@@ -44,7 +44,7 @@ flynn route add http -s todos-web --sticky mydomain.com
 flynn scale web=3
 ```
 
-From the docs (https://flynn.io/docs/cli#route):    
+From the docs (https://flynn.io/docs/cli#route):
 `--sticky` enable cookie-based sticky routing (http only)
 
 I will try this with https://github.com/meteorhacks/cluster when I have the time

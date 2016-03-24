@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+  <div class="about">
+    <img class="about__img" src="https://avatars1.githubusercontent.com/u/430872?v=3&s=460">
+    <h3>benjick</h3>
+    <p>Max Malm</p>
+    <p><a href="https://github.com/benjick">Github</a> <a href="https://twitter.com/benjick">Twitter</a></p>
+  </div>
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "blog") }}
+
+  <div class="post-list">
+    {{ range $paginator.Pages }}
+      <a class="post-list__link" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ end }}
+
+    {{ partial "paginator.html" . }}
+  </div>
+
+{{ partial "footer.html" . }}

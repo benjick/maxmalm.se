@@ -1,0 +1,18 @@
+name = "Benclean"
+license = "MIT"
+licenselink = "https://github.com/benjick/maxmalm.se/tree/master/themes/benclean/LICENSE.md"
+description = "Google MDL blog in Hugo"
+homepage = "http://maxmalm.se/"
+tags = [""]
+features = ["Lists", "Post"]
+min_version = 0.13
+
+[author]
+  name = "Max Malm"
+  homepage = "http://maxmalm.se"
+
+# If porting an existing theme
+[original]
+  name = "MDL blog"
+  homepage = "http://www.getmdl.io/templates/blog/index.html"
+  repo = "https://github.com/google/material-design-lite/tree/master/templates/blog"
